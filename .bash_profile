@@ -1,6 +1,4 @@
 # .bash_profile file
-# By Balaji S. Srinivasan (balajis@stanford.edu)
-#
 # Concepts:
 # http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html
 #
@@ -58,8 +56,10 @@ fi
 #  - These are line by line so that you can kill one without affecting the others.
 #  - Lowest priority first, highest priority last.
 export PATH=$PATH
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$HOME/bin:$PATH
 export PATH=/usr/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/heroku/bin:$PATH # Heroku: https://toolbelt.heroku.com/standalone
+TERM=xterm; export TERM
